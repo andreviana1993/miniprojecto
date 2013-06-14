@@ -115,4 +115,4 @@ unsigned char getc_usart(void) {
         putsUSART(str); // send string to USART
 
 	}
-}}
+}
