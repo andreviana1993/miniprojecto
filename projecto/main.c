@@ -70,7 +70,7 @@ unsigned char getc_usart(void) {
  void main (void)
 {
 	char c;
-  	char str[7] = "ECHO:x\0";
+  	char str[8] = "ECHO:x\0";
 
 	RCONbits.IPEN = 1; // Enable priority interrupt
 	INTCON = 0b10100000;
@@ -85,12 +85,8 @@ unsigned char getc_usart(void) {
 	//T0CON=0b10000110;
 
 //    configure USART
-    OpenUSART(USART_TX_INT_OFF &
-            USART_RX_INT_OFF &
-            USART_ASYNCH_MODE &
-            USART_EIGHT_BIT &
-            USART_CONT_RX,
-            129);
+    OpenUSART(USART_TX_INT_OFF & USART_RX_INT_OFF & USART_ASYNCH_MODE & USART_EIGHT_BIT & USART_CONT_RX,
+			 129);
 
 
 	OpenADC( ADC_FOSC_64 & ADC_RIGHT_JUST & ADC_1ANA , ADC_CH0 & ADC_INT_OFF , 0 );
