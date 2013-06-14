@@ -5,7 +5,6 @@ Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 45 : symbol
 Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 45 : symbol 'T0_PS_1_64' has not been defined
 Warning[2058] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 45 : call of function without prototype
 Warning[2058] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 46 : call of function without prototype
-Warning[2073] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 73 : null-terminated initializer string too long
 Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 95 : symbol 'ADC1_ANA_2REF' has not been defined
 Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 96 : symbol 'TIMER0_INT_ON' has not been defined
 Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 96 : symbol 'T0_16BIT' has not been defined
@@ -13,3 +12,13 @@ Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 96 : symbol
 Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 96 : symbol 'T0_PS_1_64' has not been defined
 Warning[2058] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 96 : call of function without prototype
 Warning[2058] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 97 : call of function without prototype
+Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 103 : symbol 'c' has not been defined
+Error[1101] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 103 : lvalue required
+Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 104 : symbol 'c' has not been defined
+Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 106 : symbol 'c' has not been defined
+Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 112 : symbol 'str' has not been defined
+Error[1129] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 112 : [] operator requires a pointer and an integer as operands
+Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 112 : symbol 'c' has not been defined
+Error[1101] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 112 : lvalue required
+Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 113 : symbol 'str' has not been defined
+Warning[2054] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 113 : suspicious pointer conversion
