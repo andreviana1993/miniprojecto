@@ -36,7 +36,7 @@ void high_ISR (void)
 {
 	if(INTCONbits.TMR0IF) //handle high-priority interrupts
 		{
-			OpenADC( ADC_FOSC_64 & ADC_RIGHT_JUST & ADC1_ANA , ADC_CH0 & ADC_INT_OFF , 0 );
+			OpenADC( ADC_FOSC_64 & ADC_RIGHT_JUST & ADC_1ANA , ADC_CH0 & ADC_INT_OFF , 0 );
 			ConvertADC();
 			while(busyADC());
 			resultado= ReadADC();
