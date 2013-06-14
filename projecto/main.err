@@ -1,13 +1,3 @@
-Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 45 : symbol 'TIMER0_INT_ON' has not been defined
-Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 45 : symbol 'T0_16BIT' has not been defined
-Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 45 : symbol 'T0_SOURCE_INT' has not been defined
-Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 45 : symbol 'T0_PS_1_64' has not been defined
-Warning[2058] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 45 : call of function without prototype
-Warning[2058] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 46 : call of function without prototype
+Warning[2058] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 42 : call of function without prototype
 Warning[2073] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 73 : null-terminated initializer string too long
-Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 96 : symbol 'TIMER0_INT_ON' has not been defined
-Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 96 : symbol 'T0_16BIT' has not been defined
-Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 96 : symbol 'T0_SOURCE_INT' has not been defined
-Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 96 : symbol 'T0_PS_1_64' has not been defined
-Warning[2058] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 96 : call of function without prototype
-Warning[2058] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 97 : call of function without prototype
+Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 95 : symbol 'ADC1_ANA_2REF' has not been defined
