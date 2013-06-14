@@ -1,3 +1,5 @@
 Warning[2058] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 43 : call of function without prototype
+Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 46 : symbol 'TIMER0_INT_ON' has not been defined
 Warning[2073] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 77 : null-terminated initializer string too long
 Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 99 : symbol 'ADC1_ANA_2REF' has not been defined
+Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 100 : symbol 'TIMER0_INT_ON' has not been defined
