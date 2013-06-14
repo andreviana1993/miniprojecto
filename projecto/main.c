@@ -42,9 +42,9 @@ void high_ISR (void)
 //            while(busyADC());
 //            resultado= ReadADC();
 //
-//            OpenTimer0( TIMER0_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_64 );
-//            WriteTimer0( 0x7A & 0xE1 );
-//            INTCONbits.TMR0IF=0;
+            OpenTimer0( TIMER0_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_64 );
+            WriteTimer0( 0x7A & 0xE1 );
+            INTCONbits.TMR0IF=0;
         }
 }
   
@@ -93,8 +93,8 @@ void main(void) {
             129);
 
 //    OpenADC( ADC_FOSC_64 & ADC_RIGHT_JUST & ADC1_ANA_2REF , ADC_CH0 & ADC_INT_OFF , 0 );
-//    OpenTimer0( TIMER0_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_64 );
-//    WriteTimer0( 0x7A & 0xE1 );
+    OpenTimer0( TIMER0_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_64 );
+    WriteTimer0( 0x7A & 0xE1 );
 
 
 
