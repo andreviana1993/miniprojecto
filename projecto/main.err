@@ -1,4 +1,3 @@
-Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 38 : symbol 'ADC1_ANA' has not been defined
 Warning[2058] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 40 : call of function without prototype
 Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 43 : symbol 'TIMER0_INT_ON' has not been defined
 Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 74 : symbol 'TIMER0_INT_ON' has not been defined
