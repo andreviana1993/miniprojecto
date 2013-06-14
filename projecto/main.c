@@ -37,7 +37,7 @@ void high_ISR (void)
 		{
 			OpenADC( ADC_FOSC_64 & ADC_RIGHT_JUST & ADC_1ANA , ADC_CH0 & ADC_INT_OFF , 0 );
 			ConvertADC();
-			while(busyADC());
+			while(BusyADC());
 			resultado= ReadADC();
 
 			OpenTimer0( TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_64 );
