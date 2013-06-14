@@ -1,3 +1,1 @@
-Warning[2058] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 42 : call of function without prototype
-Warning[2073] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 76 : null-terminated initializer string too long
-Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 98 : symbol 'ADC1_ANA_2REF' has not been defined
+Error[1027] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 4 : unable to locate 'timer.h'

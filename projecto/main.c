@@ -1,6 +1,7 @@
 #include <p18f4580.h>
 #include <usart.h>
 #include <adc.h>
+#include <timer.h>
 
 /******************************/
 
