@@ -42,7 +42,7 @@ void high_ISR (void)
 			resultado= ReadADC();
 
 			OpenTimer0( TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_64 );
-			WriteTimer0( 0x7A & 0xE1 );
+			WriteTimer0( 57722 );
 			INTCONbits.TMR0IF=0;	
 		}
 }
@@ -70,7 +70,7 @@ unsigned char getc_usart(void) {
  void main (void)
 {
 	char c;
-  	char str[7] = "ECHO:x\0";
+  	char str[8] = "ECHO:x\0";
 
 	RCONbits.IPEN = 1; // Enable priority interrupt
 	INTCON = 0b10100000;
@@ -95,7 +95,7 @@ unsigned char getc_usart(void) {
 
 	OpenADC( ADC_FOSC_64 & ADC_RIGHT_JUST & ADC_1ANA , ADC_CH0 & ADC_INT_OFF , 0 );
 	OpenTimer0( TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_64 );
-	WriteTimer0( 0x7A & 0xE1 );
+	WriteTimer0( 57722 );
 	
 
 	//CONFIGURAR AQUI AS INTERRUPÇÕES
