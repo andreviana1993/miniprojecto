@@ -1,36 +1,38 @@
 MPLINK 4.46, Linker
-Linker Map File - Created Fri Jun 07 14:32:13 2013
+Linker Map File - Created Fri Jun 14 17:59:25 2013
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
                 ---------  ---------  ---------  ---------  ---------
                _entry_scn       code   0x000000    program   0x000006
                    .cinit    romdata   0x000006    program   0x000002
-               _cinit_scn       code   0x000008    program   0x00009e
-             .code_main.o       code   0x0000a6    program   0x000098
-            .code_uopen.o       code   0x00013e    program   0x00008a
-            .code_uputs.o       code   0x0001c8    program   0x00004c
-           .code_uwrite.o       code   0x000214    program   0x00002e
-                    .code       code   0x000242    program   0x000020
-             _startup_scn       code   0x000262    program   0x00001c
-           .code___init.o       code   0x00027e    program   0x000002
-         .idata_c018i.o_i    romdata   0x000280    program   0x000000
-            .code_udefs.o       code   0x000280    program   0x000000
-         .romdata_udefs.o    romdata   0x000280    program   0x000000
-         .idata_udefs.o_i    romdata   0x000280    program   0x000000
-          .idata_main.o_i    romdata   0x000280    program   0x000000
-        .romdata_uwrite.o    romdata   0x000280    program   0x000000
-        .idata_uwrite.o_i    romdata   0x000280    program   0x000000
-          .romdata_main.o    romdata   0x000280    program   0x000000
-         .romdata_uputs.o    romdata   0x000280    program   0x000000
-         .idata_uputs.o_i    romdata   0x000280    program   0x000000
-            .code_c018i.o       code   0x000280    program   0x000000
-        .romdata___init.o    romdata   0x000280    program   0x000000
-        .idata___init.o_i    romdata   0x000280    program   0x000000
-         .romdata_c018i.o    romdata   0x000280    program   0x000000
-         .romdata_uopen.o    romdata   0x000280    program   0x000000
-         .idata_uopen.o_i    romdata   0x000280    program   0x000000
-             .stringtable    romdata   0x000280    program   0x000000
+              high_vector       code   0x000008    program   0x000006
+           .code___init.o       code   0x00000e    program   0x000002
+            .code_udefs.o       code   0x000010    program   0x000000
+         .romdata_udefs.o    romdata   0x000010    program   0x000000
+         .idata_udefs.o_i    romdata   0x000010    program   0x000000
+        .romdata_uwrite.o    romdata   0x000010    program   0x000000
+        .idata_uwrite.o_i    romdata   0x000010    program   0x000000
+         .romdata_uputs.o    romdata   0x000010    program   0x000000
+         .idata_uputs.o_i    romdata   0x000010    program   0x000000
+        .romdata___init.o    romdata   0x000010    program   0x000000
+        .idata___init.o_i    romdata   0x000010    program   0x000000
+         .romdata_uopen.o    romdata   0x000010    program   0x000000
+         .idata_uopen.o_i    romdata   0x000010    program   0x000000
+             .stringtable    romdata   0x000010    program   0x000000
+          .romdata_main.o    romdata   0x000010    program   0x000000
+          .idata_main.o_i    romdata   0x000010    program   0x000000
+            .code_c018i.o       code   0x000010    program   0x000000
+         .romdata_c018i.o    romdata   0x000010    program   0x000000
+         .idata_c018i.o_i    romdata   0x000010    program   0x000000
+               low_vector       code   0x000018    program   0x000006
+             .code_main.o       code   0x00001e    program   0x0000e4
+               _cinit_scn       code   0x000102    program   0x00009e
+            .code_uopen.o       code   0x0001a0    program   0x00008a
+            .code_uputs.o       code   0x00022a    program   0x00004c
+           .code_uwrite.o       code   0x000276    program   0x00002e
+                    .code       code   0x0002a4    program   0x000020
+             _startup_scn       code   0x0002c4    program   0x00001c
                 MATH_DATA      udata   0x000000       data   0x000002
                  .tmpdata      udata   0x000002       data   0x000002
            .udata_c018i.o      udata   0x000060       data   0x00000a
@@ -69,37 +71,45 @@ Linker Map File - Created Fri Jun 07 14:32:13 2013
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x00027f      
-            640 out of 33048 program addresses used, program memory utilization is 1%
+                            0x000000    0x00000f      
+                            0x000018    0x0002df      
+            728 out of 33048 program addresses used, program memory utilization is 2%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                OpenUSART   0x00013e    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
-               WriteUSART   0x000214    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uwrite.c
+                OpenUSART   0x0001a0    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
+               WriteUSART   0x000276    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uwrite.c
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00001   0x00027c    program     static                          
-       ___return_lbl00002   0x0000a4    program     static                          
-                   __init   0x00027e    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-            __zero_memory   0x000242    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-                _do_cinit   0x000008    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+       ___return_lbl00000   0x00000c    program     static                          
+       ___return_lbl00001   0x0002de    program     static                          
+       ___return_lbl00001   0x00001c    program     static                          
+       ___return_lbl00002   0x00019e    program     static                          
+       ___return_lbl00004   0x00004a    program     static                          
+                   __init   0x00000e    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+            __zero_memory   0x0002a4    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                _do_cinit   0x000102    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 _startup   0x000262    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                compare_l   0x000258    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-                copy_loop   0x00007a    program     static                          
-            copy_one_byte   0x000080    program     static                          
-                     done   0x0000a4    program     static                          
-             done_copying   0x00008e    program     static                          
-               getc_usart   0x0000a6    program     extern C:\Users\André\Desktop\escola\sdm2\projecto\main.c
-                     loop   0x000272    program     static                          
-                   loop_h   0x000250    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-                   loop_l   0x00025a    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-                     main   0x0000b2    program     extern C:\Users\André\Desktop\escola\sdm2\projecto\main.c
-                putsUSART   0x0001c8    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uputs.c
-                     test   0x000022    program     static                          
-               zero_block   0x000250    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                 _startup   0x0002c4    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                compare_l   0x0002ba    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                copy_loop   0x000174    program     static                          
+            copy_one_byte   0x00017a    program     static                          
+                     done   0x00019e    program     static                          
+             done_copying   0x000188    program     static                          
+               getc_usart   0x00005c    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
+                 high_ISR   0x00001e    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
+           high_interrupt   0x000008    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
+                     loop   0x0002d4    program     static                          
+                   loop_h   0x0002b2    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                   loop_l   0x0002bc    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                  low_ISR   0x000034    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
+            low_interrupt   0x000018    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
+                     main   0x000068    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
+                putsUSART   0x00022a    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uputs.c
+                     test   0x00011c    program     static                          
+               zero_block   0x0002b2    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
                    ADCON0   0x000fc2       data     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
                ADCON0bits   0x000fc2       data     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
                    ADCON1   0x000fc1       data     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
@@ -847,7 +857,7 @@ Linker Map File - Created Fri Jun 07 14:32:13 2013
                curr_entry   0x000065       data     static E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                  data_ptr   0x000067       data     static E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                      prom   0x000060       data     static E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                resultado   0x00006a       data     extern C:\Users\André\Desktop\escola\sdm2\projecto\main.c
+                resultado   0x00006a       data     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
 
 
 
@@ -856,27 +866,34 @@ Linker Map File - Created Fri Jun 07 14:32:13 2013
                 ---------  ---------  ---------  --------- ---------                
                    _entry   0x000000    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
        ___return_lbl00000   0x000004    program     static                          
-                _do_cinit   0x000008    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x000022    program     static                          
-                copy_loop   0x00007a    program     static                          
-            copy_one_byte   0x000080    program     static                          
-             done_copying   0x00008e    program     static                          
-       ___return_lbl00002   0x0000a4    program     static                          
-                     done   0x0000a4    program     static                          
-               getc_usart   0x0000a6    program     extern C:\Users\André\Desktop\escola\sdm2\projecto\main.c
-                     main   0x0000b2    program     extern C:\Users\André\Desktop\escola\sdm2\projecto\main.c
-                OpenUSART   0x00013e    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
-                putsUSART   0x0001c8    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uputs.c
-               WriteUSART   0x000214    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uwrite.c
-            __zero_memory   0x000242    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-                   loop_h   0x000250    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-               zero_block   0x000250    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-                compare_l   0x000258    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-                   loop_l   0x00025a    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-                 _startup   0x000262    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x000272    program     static                          
-       ___return_lbl00001   0x00027c    program     static                          
-                   __init   0x00027e    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+           high_interrupt   0x000008    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
+       ___return_lbl00000   0x00000c    program     static                          
+                   __init   0x00000e    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+            low_interrupt   0x000018    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
+       ___return_lbl00001   0x00001c    program     static                          
+                 high_ISR   0x00001e    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
+                  low_ISR   0x000034    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
+       ___return_lbl00004   0x00004a    program     static                          
+               getc_usart   0x00005c    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
+                     main   0x000068    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
+                _do_cinit   0x000102    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x00011c    program     static                          
+                copy_loop   0x000174    program     static                          
+            copy_one_byte   0x00017a    program     static                          
+             done_copying   0x000188    program     static                          
+       ___return_lbl00002   0x00019e    program     static                          
+                     done   0x00019e    program     static                          
+                OpenUSART   0x0001a0    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
+                putsUSART   0x00022a    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uputs.c
+               WriteUSART   0x000276    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uwrite.c
+            __zero_memory   0x0002a4    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                   loop_h   0x0002b2    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+               zero_block   0x0002b2    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                compare_l   0x0002ba    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                   loop_l   0x0002bc    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                 _startup   0x0002c4    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x0002d4    program     static                          
+       ___return_lbl00001   0x0002de    program     static                          
                      SIGN   0x000000       data     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
             __FPFLAGSbits   0x000001       data     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
                 __FPFLAGS   0x000001       data     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
@@ -885,7 +902,7 @@ Linker Map File - Created Fri Jun 07 14:32:13 2013
                 curr_byte   0x000063       data     static E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                curr_entry   0x000065       data     static E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                  data_ptr   0x000067       data     static E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                resultado   0x00006a       data     extern C:\Users\André\Desktop\escola\sdm2\projecto\main.c
+                resultado   0x00006a       data     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
              USART_Status   0x00006c       data     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\udefs.c
                  RXF6SIDH   0x000d60       data     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
              RXF6SIDHbits   0x000d60       data     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
