@@ -116,6 +116,7 @@ void main(void) {
 
     while (1); // stay in an infinite loop
     {
+        
         c = getc_usart();
         if (c == 'l') {
             PORTB = 0b00000001;
