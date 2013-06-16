@@ -105,8 +105,14 @@
         <property key="stack-analysis-mcc18" value="false"/>
         <property key="stack-analysis-mplink" value="false"/>
       </C18LanguageToolchain>
+      <HI-TECH-COMP>
+      </HI-TECH-COMP>
+      <HI-TECH-LINK>
+      </HI-TECH-LINK>
       <Simulator>
       </Simulator>
+      <XC8-config-global>
+      </XC8-config-global>
     </conf>
   </confs>
 </configurationDescriptor>
