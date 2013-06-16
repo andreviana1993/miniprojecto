@@ -37,6 +37,24 @@ void low_interrupt(void) // at 0x18
 #pragma interrupt high_ISR
 
 void high_ISR(void) {
+    if (PORTBbits.RB1)
+    {
+        OpenTimer1(TIMER_INT_ON &
+                T0_16BIT &
+                T0_SOURCE_INT &
+                T0_PS_1_64);
+        WriteTimer0(57722);
+        INTCONbits.TMR0IF =0;
+    }
+    else if (!PORTBbits.RB1)
+    {
+        OpenTimer1(TIMER_INT_ON &
+                T0_16BIT &
+                T0_SOURCE_INT &
+                T0_PS_1_64);
+        WriteTimer0(57722);
+        INTCONbits.TMR1IF = 0;
+    }
     if (INTCONbits.TMR0IF) //handle high-priority interrupts
     {
         // ADC handler
@@ -91,7 +109,7 @@ void main(void) {
 
     TRISD = 0b00000000; // Configure PORTD for output
     PORTD = 0b00000000; // turn off all LEDs initially
-    TRISB = 0b00000000; // Configure PORTB for output
+    TRISB = 0b00000010; // Configure PORTB for output except RB1
     PORTB = 0b00000000; // turn off all LEDs initially
 
     //TMR0H=0x67;
@@ -122,6 +140,12 @@ void main(void) {
             PORTB = 0b00000001;
         } else if (c == 'd') {
             PORTB = 0b00000000;
+        }
+        else if (c == 'q') {
+            resultado = resultado + 50;
+        }
+        else if (c == 'f') {
+            resultado = resultado - 50;
         }
         
         // get char from USART by polling method
