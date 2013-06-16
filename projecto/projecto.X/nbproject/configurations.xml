@@ -32,8 +32,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>Simulator</platformTool>
-        <languageToolchain>C18</languageToolchain>
-        <languageToolchainVersion>3.40</languageToolchainVersion>
+        <languageToolchain>XC8</languageToolchain>
+        <languageToolchainVersion>1.12</languageToolchainVersion>
         <platform>2</platform>
       </toolsSet>
       <compileType>
@@ -105,6 +105,10 @@
         <property key="stack-analysis-mcc18" value="false"/>
         <property key="stack-analysis-mplink" value="false"/>
       </C18LanguageToolchain>
+      <HI-TECH-COMP>
+      </HI-TECH-COMP>
+      <HI-TECH-LINK>
+      </HI-TECH-LINK>
       <Simulator>
         <property key="animationupdates.realtimewatchupdates" value="false"/>
         <property key="animationupdates.steptime" value=""/>
@@ -143,6 +147,8 @@
         <property key="uart1io.outputfile" value=""/>
         <property key="uart1io.uartioenabled" value="true"/>
       </Simulator>
+      <XC8-config-global>
+      </XC8-config-global>
     </conf>
   </confs>
 </configurationDescriptor>
