@@ -105,12 +105,6 @@
         <property key="stack-analysis-mcc18" value="false"/>
         <property key="stack-analysis-mplink" value="false"/>
       </C18LanguageToolchain>
-      <HI-TECH-COMP>
-      </HI-TECH-COMP>
-      <HI-TECH-LINK>
-      </HI-TECH-LINK>
-      <MPASMWIN-LD>
-      </MPASMWIN-LD>
       <Simulator>
         <property key="animationupdates.realtimewatchupdates" value="false"/>
         <property key="animationupdates.steptime" value=""/>
@@ -149,10 +143,6 @@
         <property key="uart1io.outputfile" value=""/>
         <property key="uart1io.uartioenabled" value="true"/>
       </Simulator>
-      <XC8-config-global>
-      </XC8-config-global>
-      <mpasmsuite>
-      </mpasmsuite>
     </conf>
   </confs>
 </configurationDescriptor>
