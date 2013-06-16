@@ -32,8 +32,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>Simulator</platformTool>
-        <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion></languageToolchainVersion>
+        <languageToolchain>MPASMWIN</languageToolchain>
+        <languageToolchainVersion>5.50</languageToolchainVersion>
         <platform>2</platform>
       </toolsSet>
       <compileType>
