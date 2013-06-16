@@ -4,10 +4,11 @@
 #include <usart.h>
 
 /******************************/
-
+// Global variables
 int resultado;
 
 /******************************/
+// Function prototypes
 
 void low_ISR(void);
 void high_ISR(void);
@@ -38,17 +39,28 @@ void low_interrupt(void) // at 0x18
 void high_ISR(void) {
     if (INTCONbits.TMR0IF) //handle high-priority interrupts
     {
-        OpenADC(ADC_FOSC_64 & ADC_RIGHT_JUST & ADC_1ANA, ADC_CH0 & ADC_INT_OFF, 0);
+        // ADC handler
+
+        OpenADC(ADC_FOSC_64 &
+                ADC_RIGHT_JUST &
+                ADC_1ANA,
+                ADC_CH0 &
+                ADC_INT_OFF,
+                0);
         ConvertADC();
         while (BusyADC());
         resultado = ReadADC();
 
-        OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_64);
+        // Timer0 handler
+
+        OpenTimer0(TIMER_INT_ON &
+                T0_16BIT &
+                T0_SOURCE_INT &
+                T0_PS_1_64);
         WriteTimer0(57722);
         INTCONbits.TMR0IF = 0;
     }
 }
-
 
 #pragma interruptlow low_ISR
 
@@ -59,6 +71,7 @@ void low_ISR(void) {
 }
 
 /*****************************/
+// Usart related code
 
 unsigned char getc_usart(void) {
     while (!PIR1bits.RCIF);
@@ -71,22 +84,26 @@ unsigned char getc_usart(void) {
 
 void main(void) {
     char c;
-    char str[7] = "ECHO:x";
+    char str[7]="ECHO:x\0";
 
     RCONbits.IPEN = 1; // Enable priority interrupt
     INTCON = 0b10100000;
 
-    TRISD = 0x00; // Configure PORTD for output
+    TRISD = 0b00000000; // Configure PORTD for output
     PORTD = 0b00000000; // turn off all LEDs initially
-    TRISB = 0b00000000;
-    PORTB = 0b00000000;
+    TRISB = 0b00000000; // Configure PORTB for output
+    PORTB = 0b00000000; // turn off all LEDs initially
 
     //TMR0H=0x67;
     //TMR0L=0x69;
     //T0CON=0b10000110;
 
     //    configure USART
-    OpenUSART(USART_TX_INT_OFF & USART_RX_INT_OFF & USART_ASYNCH_MODE & USART_EIGHT_BIT & USART_CONT_RX,
+    OpenUSART(USART_TX_INT_OFF &
+            USART_RX_INT_OFF &
+            USART_ASYNCH_MODE &
+            USART_EIGHT_BIT &
+            USART_CONT_RX,
             129);
 
 
@@ -105,8 +122,7 @@ void main(void) {
         } else if (c == 'd') {
             PORTB = 0b00000000;
         }
-
-
+        
         // get char from USART by polling method
         str[5] = c;
         putsUSART(str); // send string to USART
