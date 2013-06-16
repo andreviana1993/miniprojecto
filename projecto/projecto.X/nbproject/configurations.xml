@@ -32,8 +32,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>Simulator</platformTool>
-        <languageToolchain>MPASMWIN</languageToolchain>
-        <languageToolchainVersion>5.50</languageToolchainVersion>
+        <languageToolchain>C18</languageToolchain>
+        <languageToolchainVersion>3.40</languageToolchainVersion>
         <platform>2</platform>
       </toolsSet>
       <compileType>
@@ -109,10 +109,14 @@
       </HI-TECH-COMP>
       <HI-TECH-LINK>
       </HI-TECH-LINK>
+      <MPASMWIN-LD>
+      </MPASMWIN-LD>
       <Simulator>
       </Simulator>
       <XC8-config-global>
       </XC8-config-global>
+      <mpasmsuite>
+      </mpasmsuite>
     </conf>
   </confs>
 </configurationDescriptor>
