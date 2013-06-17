@@ -39,35 +39,14 @@ void low_interrupt(void) // at 0x18
 void high_ISR(void) {
     if (PORTBbits.RB1)
     {
-        OpenTimer1(TIMER_INT_ON &
-                T0_16BIT &
-                T0_SOURCE_INT &
-                T0_PS_1_64);
-        WriteTimer0(57722);
-        INTCONbits.TMR0IF =0;
+        
     }
     else if (!PORTBbits.RB1)
     {
-        OpenTimer1(TIMER_INT_ON &
-                T0_16BIT &
-                T0_SOURCE_INT &
-                T0_PS_1_64);
-        WriteTimer0(57722);
-        INTCONbits.TMR1IF = 0;
+        
     }
     if (INTCONbits.TMR0IF) //handle high-priority interrupts
     {
-        // ADC handler
-
-        OpenADC(ADC_FOSC_64 &
-                ADC_RIGHT_JUST &
-                ADC_1ANA,
-                ADC_CH0 &
-                ADC_INT_OFF,
-                0);
-        ConvertADC();
-        while (BusyADC());
-        resultado = ReadADC();
 
         // Timer0 handler
 
@@ -115,6 +94,7 @@ void main(void) {
     //TMR0H=0x67;
     //TMR0L=0x69;
     //T0CON=0b10000110;
+	
 
     //    configure USART
     OpenUSART(USART_TX_INT_OFF &
@@ -134,7 +114,13 @@ void main(void) {
 
     while (1); // stay in an infinite loop
     {
-        
+        // ADC handler
+
+        ConvertADC();
+        while (BusyADC());
+        resultado = ReadADC();
+		
+		// Usart handler
         c = getc_usart();
         if (c == 'l') {
             PORTB = 0b00000001;
