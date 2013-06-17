@@ -79,9 +79,6 @@ unsigned char getc_usart(void)
 
 /*********************************/
 
-
-
-
 void main(void)
 {
 	char c;
@@ -97,7 +94,11 @@ void main(void)
 
 	OpenUSART (USART_TX_INT_OFF & USART_RX_INT_OFF & USART_ASYNCH_MODE & USART_EIGHT_BIT & USART_CONT_RX,129 );
 
-	OpenADC(ADC_FOSC_64 & ADC_RIGHT_JUST & ADC_1ANA_2REF, ADC_CH0 & ADC_INT_OFF, 0);
+	
+//OpenADC(ADC_FOSC_64 & ADC_RIGHT_JUST & ADC_1ANA_2REF, ADC_CH0 & ADC_INT_OFF, 0);
+	ADCON0 = 0b00000001;
+	ADCON1 = 0b00111110;
+	ADCON2 = 0b10000110;
     OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_64);
     WriteTimer0(57722);
 	
