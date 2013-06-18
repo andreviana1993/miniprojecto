@@ -37,23 +37,17 @@ void low_interrupt(void) // at 0x18
 #pragma interrupt high_ISR
 
 void high_ISR(void) {
-    if (PORTBbits.RB1)
-    {
-        
-    }
-    else if (!PORTBbits.RB1)
-    {
-        
+    if (PORTBbits.RB1) {
+
+    } else if (!PORTBbits.RB1) {
+
     }
     if (INTCONbits.TMR0IF) //handle high-priority interrupts
     {
 
         // Timer0 handler
 
-        OpenTimer0(TIMER_INT_ON &
-                T0_16BIT &
-                T0_SOURCE_INT &
-                T0_PS_1_64);
+        OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_64);
         WriteTimer0(57722);
         INTCONbits.TMR0IF = 0;
     }
@@ -70,58 +64,53 @@ void low_ISR(void) {
 /*****************************/
 // Usart related code
 
-unsigned char getc_usart(void)
-{
-	while (!PIR1bits.RCIF);	
-	PIR1bits.RCIF = 0;
-	return RCREG;
+unsigned char getc_usart(void) {
+    while (!PIR1bits.RCIF);
+    PIR1bits.RCIF = 0;
+    return RCREG;
 }
 
 /*********************************/
 
-void main(void)
-{
-	char c;
-	char str[7]="ECHO:x";
+void main(void) {
+    char c;
+    char str[7] = "ECHO:x";
 
-	RCONbits.IPEN = 1; // Enable priority interrupt
+    RCONbits.IPEN = 1; // Enable priority interrupt
     INTCON = 0b10100000;
 
-	TRISD = 0b00000000; // Configure PORTD for output
+    TRISD = 0b00000000; // Configure PORTD for output
     PORTD = 0b00000000; // turn off all LEDs initially
     TRISB = 0b00000010; // Configure PORTB for output except RB1
     PORTB = 0b00000000; // turn off all LEDs initially
 
-	OpenUSART (USART_TX_INT_OFF & USART_RX_INT_OFF & USART_ASYNCH_MODE & USART_EIGHT_BIT & USART_CONT_RX,129 );
+    OpenUSART(USART_TX_INT_OFF & USART_RX_INT_OFF & USART_ASYNCH_MODE & USART_EIGHT_BIT & USART_CONT_RX, 129);
 
-	
-//OpenADC(ADC_FOSC_64 & ADC_RIGHT_JUST & ADC_1ANA_2REF, ADC_CH0 & ADC_INT_OFF, 0);
-	ADCON0 = 0b00000001;
-	ADCON1 = 0b00111110;
-	ADCON2 = 0b10000110;
+
+    //OpenADC(ADC_FOSC_64 & ADC_RIGHT_JUST & ADC_1ANA_2REF, ADC_CH0 & ADC_INT_OFF, 0);
+    ADCON0 = 0b00000001;
+    ADCON1 = 0b00111110;
+    ADCON2 = 0b10000110;
     OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_64);
     WriteTimer0(57722);
-	
-	while(1)
-		{
-		c = getc_usart();
-		if (c == 'l') {
+
+    while (1) {
+        c = getc_usart();
+        if (c == 'l') {
             PORTB = 0b00000001;
         } else if (c == 'd') {
             PORTB = 0b00000000;
-        }
-        else if (c == 'q') {
+        } else if (c == 'q') {
             resultado = resultado + 50;
-        }
-        else if (c == 'f') {
+        } else if (c == 'f') {
             resultado = resultado - 50;
         }
-		str[5]=c;
-		putsUSART( str );
+        str[5] = c;
+        putsUSART(str);
 
-		ConvertADC();
+        ConvertADC();
         while (BusyADC());
         resultado = ReadADC();
 
-		}
-}	
+    }
+}
