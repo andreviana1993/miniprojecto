@@ -37,9 +37,9 @@ void low_interrupt(void) // at 0x18
 #pragma interrupt high_ISR
 
 void high_ISR(void) {
-    if (PORTBbits.RB1) {
+    if (INTCONbits.INT0IF) {
 
-    } else if (!PORTBbits.RB1) {
+    } else if (!INTCONbits.INT0IF) {
 
     }
     if (INTCONbits.TMR0IF) //handle high-priority interrupts
@@ -81,7 +81,7 @@ void main(void) {
 
     TRISD = 0b00000000; // Configure PORTD for output
     PORTD = 0b00000000; // turn off all LEDs initially
-    TRISB = 0b00000010; // Configure PORTB for output except RB1
+    TRISB = 0b00000011; // Configure PORTB for output except RB1 and RB0 (INT0)
     PORTB = 0b00000000; // turn off all LEDs initially
 
     OpenUSART(USART_TX_INT_OFF & USART_RX_INT_OFF & USART_ASYNCH_MODE & USART_EIGHT_BIT & USART_CONT_RX, 129);
@@ -97,7 +97,7 @@ void main(void) {
     while (1) {
         c = getc_usart();
         if (c == 'l') {
-            PORTB = 0b00000001;
+            PORTB = 0b00001000;
         } else if (c == 'd') {
             PORTB = 0b00000000;
         } else if (c == 'q') {
