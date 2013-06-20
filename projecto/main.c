@@ -38,11 +38,11 @@ void low_interrupt(void) // at 0x18
 
 void high_ISR(void) {
     if (INTCONbits.INT0IF) {
-		INTCON2bits.INTEDG0 = ~(INTCON2bits.INTEDG0);
+		//INTCON2bits.INTEDG0 = ~(INTCON2bits.INTEDG0);
 		PORTBbits.RB1 = 0;
 		//programar timer
 		PORTDbits.RD7 = 1;
-		PORTDbits.RD7 = ~(PORTDbits.RD7 );
+		//PORTDbits.RD7 = ~(PORTDbits.RD7 );
 		INTCONbits.INT0IF = 0;
 		
     } 
