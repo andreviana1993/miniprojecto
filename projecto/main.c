@@ -43,7 +43,7 @@ void high_ISR(void) {
 		//programar timer
 		PORTDbits.RD7 = 1;
 		PORTDbits.RD7 = ~(PORTDbits.RD7 );
-		INTCONbits.INT0IF)
+		INTCONbits.INT0IF = 0;
 		
     } 
     if (INTCONbits.TMR0IF) //handle high-priority interrupts
