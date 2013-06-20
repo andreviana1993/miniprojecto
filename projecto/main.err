@@ -1,0 +1,4 @@
+Error[1205] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 46 : unknown member 'RD7' in '__tag_449'
+Error[1131] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 46 : type mismatch in assignment
+Error[1205] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 61 : unknown member 'RD7' in '__tag_449'
+Error[1131] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 61 : type mismatch in assignment
