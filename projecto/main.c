@@ -41,7 +41,8 @@ void high_ISR(void) {
 		INTCON2bits.INTEDG0 = ~(INTCON2bits.INTEDG0);
 		PORTBbits.RB1 = 0;
 		//programar timer
-		//PORTDbits.RD7 = 1;
+		
+		
 		PORTDbits.RD7 = ~(PORTDbits.RD7 );
 		INTCONbits.INT0IF = 0;
 		
@@ -50,7 +51,8 @@ void high_ISR(void) {
     {
 
         // Timer0 handler
-
+		PORTBbits.RB1 = 1;
+		
         OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_256);
         WriteTimer0(65359);
         INTCONbits.TMR0IF = 0;
@@ -95,8 +97,8 @@ void main(void) {
     ADCON0 = 0b00000001;
     ADCON1 = 0b00111110;
     ADCON2 = 0b10000110;
-    OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_64);
-    WriteTimer0(57722);
+    OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_256);
+    WriteTimer0(65359);
 
     while (1) {
         c = getc_usart();
