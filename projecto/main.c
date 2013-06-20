@@ -38,17 +38,21 @@ void low_interrupt(void) // at 0x18
 
 void high_ISR(void) {
     if (INTCONbits.INT0IF) {
-
-    } else if (!INTCONbits.INT0IF) {
-
-    }
+		INTCON2bits.INTEDG0 = ~(INTCON2bits.INTEDG0);
+		PORTBbits.RB1 = 0;
+		//programar timer
+		PORTDbits.RD7 = 1;
+		PORTDbits.RD7 = ~(PORTDbits.RD7 );
+		INTCONbits.INT0IF)
+		
+    } 
     if (INTCONbits.TMR0IF) //handle high-priority interrupts
     {
 
         // Timer0 handler
 
-        OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_64);
-        WriteTimer0(57722);
+        OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_256);
+        WriteTimer0(65359);
         INTCONbits.TMR0IF = 0;
     }
 }
@@ -81,7 +85,7 @@ void main(void) {
 
     TRISD = 0b00000000; // Configure PORTD for output
     PORTD = 0b00000000; // turn off all LEDs initially
-    TRISB = 0b00000011; // Configure PORTB for output except RB1 and RB0 (INT0)
+    TRISB = 0b00000001; // Configure PORTB for output except RB1 and RB0 (INT0)
     PORTB = 0b00000000; // turn off all LEDs initially
 
     OpenUSART(USART_TX_INT_OFF & USART_RX_INT_OFF & USART_ASYNCH_MODE & USART_EIGHT_BIT & USART_CONT_RX, 129);
