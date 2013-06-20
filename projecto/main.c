@@ -97,9 +97,9 @@ void main(void) {
     while (1) {
         c = getc_usart();
         if (c == 'l') {
-            PORTB = 0b00001000;
+            PORTBbits.RB2 = 1;
         } else if (c == 'd') {
-            PORTB = 0b00000000;
+            PORTBbits.RB2 = 0;
         } else if (c == 'q') {
             resultado = resultado + 50;
         } else if (c == 'f') {
