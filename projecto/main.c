@@ -44,7 +44,7 @@ void high_ISR(void) {
 		INTCON2bits.INTEDG0 = ~(INTCON2bits.INTEDG0);
 		OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_256);
 		WriteTimer0(65359);
-		}
+		
 		
 		
 		
@@ -55,7 +55,7 @@ void high_ISR(void) {
 		//OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_256);
         //WriteTimer0(65359);
 		//PORTDbits.RD7 = ~(PORTDbits.RD7 );
-		
+		}
 		INTCONbits.INT0IF = 0;
 		
     } 
