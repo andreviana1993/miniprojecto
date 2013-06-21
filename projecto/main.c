@@ -7,7 +7,7 @@
 // Global variables
 int temp;
 int objectivo;
-int ligarResistencia=1;
+int ligarResistencia;
 /******************************/
 // Function prototypes
 
@@ -39,17 +39,13 @@ void low_interrupt(void) // at 0x18
 
 void high_ISR(void) {
     if (INTCONbits.INT0IF) {
-		if (/*ligarResistencia*/ 1){
-		PORTBbits.RB1 = 0;
-		INTCON2bits.INTEDG0 = ~(INTCON2bits.INTEDG0);
+		if (ligarResistencia){
 		OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_256);
 		WriteTimer0(65359);
 		
-		
-		
-		
-		PORTDbits.RD7 = 0;  //debug led
-		
+		INTCON2bits.INTEDG0 = ~(INTCON2bits.INTEDG0);
+		PORTBbits.RB1 = 0;
+		PORTDbits.RD7 = 0;
 
 		
 		//OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_256);
@@ -64,7 +60,7 @@ void high_ISR(void) {
 
         // Timer0 handler
 		PORTBbits.RB1 = 1;
-		PORTDbits.RD7 = 1; //led debug
+		PORTDbits.RD7 = 1;
 		
         OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_256);
         WriteTimer0(65359);
@@ -118,7 +114,7 @@ void main(void) {
 		ConvertADC();
         while (BusyADC());
         temp = ReadADC();
-        /*if (c == 'l') {
+        if (c == 'l') {
             PORTBbits.RB2 = 1;
         } else if (c == 'd') {
             PORTBbits.RB2 = 0;
@@ -134,8 +130,15 @@ void main(void) {
 		else if (temp <objectivo) {
 		 	PORTBbits.RB2 = 0;
 			ligarResistencia = 1;
-		}	*/
+		}	
         str[3] = c;
+		
+        putsUSART(str);
+
+        
+
+    }
+}
 		
         putsUSART(str);
 
