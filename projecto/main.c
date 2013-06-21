@@ -53,7 +53,8 @@ void high_ISR(void) {
     if (INTCONbits.INT0IF) {
 		INTCON2bits.INTEDG0 = !INTCON2bits.INTEDG0;
 		//PORTDbits.RD7 = ~(PORTDbits.RD7 );
-		WriteTimer0( 6 );
+		WriteTimer0( 206 );
+		contagem=0;
 		INTCONbits.INT0IF = 0;		
     } 
     if (INTCONbits.TMR0IF) //handle high-priority interrupts
