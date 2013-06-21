@@ -13,7 +13,7 @@ int contagem=0;
 
 void timer10us( void)
 {
-		WriteTimer0( 56 );
+		WriteTimer0( 57 );
 		contagem++;
 }
 
