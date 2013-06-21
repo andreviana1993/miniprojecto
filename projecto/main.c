@@ -139,10 +139,3 @@ void main(void) {
 
     }
 }
-		
-        putsUSART(str);
-
-        
-
-    }
-}
