@@ -6,6 +6,7 @@
 /******************************/
 // Global variables
 int resultado;
+int contagem=0;
 
 /******************************/
 // Function prototypes
@@ -38,26 +39,28 @@ void low_interrupt(void) // at 0x18
 
 void high_ISR(void) {
     if (INTCONbits.INT0IF) {
-		PORTBbits.RB1 = 0;
 		INTCON2bits.INTEDG0 = !INTCON2bits.INTEDG0;
-	
-		PORTDbits.RD7 = 0;
-
-		//programar timer
-		//OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_256);
-        //WriteTimer0(65359);
 		//PORTDbits.RD7 = ~(PORTDbits.RD7 );
-		WriteTimer0(65359);	
+		WriteTimer0( 6 );
 		INTCONbits.INT0IF = 0;		
     } 
     if (INTCONbits.TMR0IF) //handle high-priority interrupts
     {
-
         // Timer0 handler
+		if (contagem<898){
+		timer10us()
+		}
+		else if (contagem>= 898 && contagem <908){
 		PORTBbits.RB1 = 1;
 		PORTDbits.RD7 = 1;
-	
-	    //WriteTimer0(65359);
+		timer10us()
+		}
+		else if (contagem = 908){
+		PORTBbits.RB1 = 1;
+		PORTDbits.RD7 = 1;
+		contagem=0
+		}
+		contagem++;
         INTCONbits.TMR0IF = 0;
     }
 }
@@ -69,6 +72,14 @@ void low_ISR(void) {
     retfie 0 // simply return
             _endasm
 }
+/*****************************/
+//timer related code
+
+void timer10us( void)
+{
+		WriteTimer( 6 );
+}
+
 
 /*****************************/
 // Usart related code
@@ -100,8 +111,8 @@ void main(void) {
     ADCON0 = 0b00000001;
     ADCON1 = 0b00111110;
     ADCON2 = 0b10000110;
-    OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_256);
-    WriteTimer0(65359);
+    OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_2);
+    //WriteTimer0( 6 );
 
     while (1) {
         c = getc_usart();
