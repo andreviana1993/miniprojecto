@@ -1,5 +1,5 @@
 MPLINK 4.46, Linker
-Linker Map File - Created Fri Jun 21 17:10:11 2013
+Linker Map File - Created Fri Jun 21 17:11:27 2013
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -10,44 +10,44 @@ Linker Map File - Created Fri Jun 21 17:10:11 2013
           .code_adcbusy.o       code   0x00000e    program   0x00000a
                low_vector       code   0x000018    program   0x000006
                    .cinit    romdata   0x00001e    program   0x00000e
-             .code_main.o       code   0x00002c    program   0x00022c
-               _cinit_scn       code   0x000258    program   0x00009e
-            .code_uopen.o       code   0x0002f6    program   0x00008a
-            .code_uputs.o       code   0x000380    program   0x00004c
-          .code_t0write.o       code   0x0003cc    program   0x000038
-           .code_t0open.o       code   0x000404    program   0x000038
-           .code_uwrite.o       code   0x00043c    program   0x00002e
-                    .code       code   0x00046a    program   0x000020
-             _startup_scn       code   0x00048a    program   0x00001c
-          .code_adcread.o       code   0x0004a6    program   0x000012
-          .code_adcconv.o       code   0x0004b8    program   0x000004
-        .romdata_uwrite.o    romdata   0x0004bc    program   0x000000
-        .idata_uwrite.o_i    romdata   0x0004bc    program   0x000000
-         .romdata_uputs.o    romdata   0x0004bc    program   0x000000
-         .idata_uputs.o_i    romdata   0x0004bc    program   0x000000
-         .idata_udefs.o_i    romdata   0x0004bc    program   0x000000
-        .romdata___init.o    romdata   0x0004bc    program   0x000000
-       .romdata_t0write.o    romdata   0x0004bc    program   0x000000
-       .idata_t0write.o_i    romdata   0x0004bc    program   0x000000
-         .romdata_udefs.o    romdata   0x0004bc    program   0x000000
-         .romdata_c018i.o    romdata   0x0004bc    program   0x000000
-          .idata_main.o_i    romdata   0x0004bc    program   0x000002
-          .romdata_main.o    romdata   0x0004bc    program   0x000000
-             .stringtable    romdata   0x0004bc    program   0x000000
-       .romdata_adcbusy.o    romdata   0x0004bc    program   0x000000
-       .romdata_adcconv.o    romdata   0x0004bc    program   0x000000
-        .idata_t0open.o_i    romdata   0x0004bc    program   0x000000
-        .romdata_t0open.o    romdata   0x0004bc    program   0x000000
-         .idata_uopen.o_i    romdata   0x0004bc    program   0x000000
-         .romdata_uopen.o    romdata   0x0004bc    program   0x000000
-       .romdata_adcread.o    romdata   0x0004bc    program   0x000000
-        .idata___init.o_i    romdata   0x0004be    program   0x000000
-       .idata_adcconv.o_i    romdata   0x0004be    program   0x000000
-       .idata_adcbusy.o_i    romdata   0x0004be    program   0x000000
-       .idata_adcread.o_i    romdata   0x0004be    program   0x000000
-            .code_c018i.o       code   0x0004be    program   0x000000
-            .code_udefs.o       code   0x0004be    program   0x000000
-         .idata_c018i.o_i    romdata   0x0004be    program   0x000000
+             .code_main.o       code   0x00002c    program   0x0001b0
+               _cinit_scn       code   0x0001dc    program   0x00009e
+            .code_uopen.o       code   0x00027a    program   0x00008a
+            .code_uputs.o       code   0x000304    program   0x00004c
+          .code_t0write.o       code   0x000350    program   0x000038
+           .code_t0open.o       code   0x000388    program   0x000038
+           .code_uwrite.o       code   0x0003c0    program   0x00002e
+                    .code       code   0x0003ee    program   0x000020
+             _startup_scn       code   0x00040e    program   0x00001c
+          .code_adcread.o       code   0x00042a    program   0x000012
+          .code_adcconv.o       code   0x00043c    program   0x000004
+        .romdata_uwrite.o    romdata   0x000440    program   0x000000
+        .idata_uwrite.o_i    romdata   0x000440    program   0x000000
+         .romdata_uputs.o    romdata   0x000440    program   0x000000
+         .idata_uputs.o_i    romdata   0x000440    program   0x000000
+         .idata_udefs.o_i    romdata   0x000440    program   0x000000
+        .romdata___init.o    romdata   0x000440    program   0x000000
+       .romdata_t0write.o    romdata   0x000440    program   0x000000
+       .idata_t0write.o_i    romdata   0x000440    program   0x000000
+         .romdata_udefs.o    romdata   0x000440    program   0x000000
+         .romdata_c018i.o    romdata   0x000440    program   0x000000
+          .idata_main.o_i    romdata   0x000440    program   0x000002
+          .romdata_main.o    romdata   0x000440    program   0x000000
+             .stringtable    romdata   0x000440    program   0x000000
+       .romdata_adcbusy.o    romdata   0x000440    program   0x000000
+       .romdata_adcconv.o    romdata   0x000440    program   0x000000
+        .idata_t0open.o_i    romdata   0x000440    program   0x000000
+        .romdata_t0open.o    romdata   0x000440    program   0x000000
+         .idata_uopen.o_i    romdata   0x000440    program   0x000000
+         .romdata_uopen.o    romdata   0x000440    program   0x000000
+       .romdata_adcread.o    romdata   0x000440    program   0x000000
+        .idata___init.o_i    romdata   0x000442    program   0x000000
+       .idata_adcconv.o_i    romdata   0x000442    program   0x000000
+       .idata_adcbusy.o_i    romdata   0x000442    program   0x000000
+       .idata_adcread.o_i    romdata   0x000442    program   0x000000
+            .code_c018i.o       code   0x000442    program   0x000000
+            .code_udefs.o       code   0x000442    program   0x000000
+         .idata_c018i.o_i    romdata   0x000442    program   0x000000
                  .tmpdata      udata   0x000000       data   0x000004
                 MATH_DATA      udata   0x000004       data   0x000002
            .udata_c018i.o      udata   0x000060       data   0x00000a
@@ -96,8 +96,8 @@ Linker Map File - Created Fri Jun 21 17:10:11 2013
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x0004bd      
-            1214 out of 33048 program addresses used, program memory utilization is 3%
+                            0x000000    0x000441      
+            1090 out of 33048 program addresses used, program memory utilization is 3%
 
 
 
@@ -105,40 +105,40 @@ Linker Map File - Created Fri Jun 21 17:10:11 2013
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
                   BusyADC   0x00000e    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\ADC\adcbusy.c
-               ConvertADC   0x0004b8    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\ADC\adcconv.c
-               OpenTimer0   0x000404    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\Timers\t0open.c
-                OpenUSART   0x0002f6    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
-                  ReadADC   0x0004a6    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\ADC\adcread.c
-              WriteTimer0   0x0003cc    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\Timers\t0write.c
-               WriteUSART   0x00043c    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uwrite.c
+               ConvertADC   0x00043c    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\ADC\adcconv.c
+               OpenTimer0   0x000388    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\Timers\t0open.c
+                OpenUSART   0x00027a    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
+                  ReadADC   0x00042a    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\ADC\adcread.c
+              WriteTimer0   0x000350    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\Timers\t0write.c
+               WriteUSART   0x0003c0    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uwrite.c
        ___return_lbl00000   0x000004    program     static                          
        ___return_lbl00000   0x00000c    program     static                          
-       ___return_lbl00001   0x0004a4    program     static                          
+       ___return_lbl00001   0x000428    program     static                          
        ___return_lbl00001   0x00001c    program     static                          
-       ___return_lbl00002   0x0002f4    program     static                          
+       ___return_lbl00002   0x000278    program     static                          
        ___return_lbl00006   0x000122    program     static                          
                    __init   0x000006    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-            __zero_memory   0x00046a    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-                _do_cinit   0x000258    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+            __zero_memory   0x0003ee    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                _do_cinit   0x0001dc    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 _startup   0x00048a    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                compare_l   0x000480    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-                copy_loop   0x0002ca    program     static                          
-            copy_one_byte   0x0002d0    program     static                          
-                     done   0x0002f4    program     static                          
-             done_copying   0x0002de    program     static                          
+                 _startup   0x00040e    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                compare_l   0x000404    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                copy_loop   0x00024e    program     static                          
+            copy_one_byte   0x000254    program     static                          
+                     done   0x000278    program     static                          
+             done_copying   0x000262    program     static                          
                getc_usart   0x000134    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
                  high_ISR   0x00002c    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
            high_interrupt   0x000008    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
-                     loop   0x00049a    program     static                          
-                   loop_h   0x000478    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-                   loop_l   0x000482    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                     loop   0x00041e    program     static                          
+                   loop_h   0x0003fc    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                   loop_l   0x000406    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
                   low_ISR   0x00010c    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
             low_interrupt   0x000018    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
                      main   0x000140    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
-                putsUSART   0x000380    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uputs.c
-                     test   0x000272    program     static                          
-               zero_block   0x000478    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                putsUSART   0x000304    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uputs.c
+                     test   0x0001f6    program     static                          
+               zero_block   0x0003fc    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
                    ADCON0   0x000fc2       data     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
                ADCON0bits   0x000fc2       data     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
                    ADCON1   0x000fc1       data     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
@@ -909,28 +909,28 @@ Linker Map File - Created Fri Jun 21 17:10:11 2013
        ___return_lbl00006   0x000122    program     static                          
                getc_usart   0x000134    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
                      main   0x000140    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
-                _do_cinit   0x000258    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x000272    program     static                          
-                copy_loop   0x0002ca    program     static                          
-            copy_one_byte   0x0002d0    program     static                          
-             done_copying   0x0002de    program     static                          
-       ___return_lbl00002   0x0002f4    program     static                          
-                     done   0x0002f4    program     static                          
-                OpenUSART   0x0002f6    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
-                putsUSART   0x000380    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uputs.c
-              WriteTimer0   0x0003cc    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\Timers\t0write.c
-               OpenTimer0   0x000404    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\Timers\t0open.c
-               WriteUSART   0x00043c    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uwrite.c
-            __zero_memory   0x00046a    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-               zero_block   0x000478    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-                   loop_h   0x000478    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-                compare_l   0x000480    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-                   loop_l   0x000482    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-                 _startup   0x00048a    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x00049a    program     static                          
-       ___return_lbl00001   0x0004a4    program     static                          
-                  ReadADC   0x0004a6    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\ADC\adcread.c
-               ConvertADC   0x0004b8    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\ADC\adcconv.c
+                _do_cinit   0x0001dc    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x0001f6    program     static                          
+                copy_loop   0x00024e    program     static                          
+            copy_one_byte   0x000254    program     static                          
+             done_copying   0x000262    program     static                          
+       ___return_lbl00002   0x000278    program     static                          
+                     done   0x000278    program     static                          
+                OpenUSART   0x00027a    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
+                putsUSART   0x000304    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uputs.c
+              WriteTimer0   0x000350    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\Timers\t0write.c
+               OpenTimer0   0x000388    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\Timers\t0open.c
+               WriteUSART   0x0003c0    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uwrite.c
+            __zero_memory   0x0003ee    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+               zero_block   0x0003fc    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                   loop_h   0x0003fc    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                compare_l   0x000404    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                   loop_l   0x000406    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                 _startup   0x00040e    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x00041e    program     static                          
+       ___return_lbl00001   0x000428    program     static                          
+                  ReadADC   0x00042a    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\ADC\adcread.c
+               ConvertADC   0x00043c    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\ADC\adcconv.c
                   __tmp_0   0x000000       data     static E:\3.45\pic18-lt\cxx-framework\src\pmc_common\ADC\adcread.c
                   __tmp_0   0x000000       data     static E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
                      SIGN   0x000004       data     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm

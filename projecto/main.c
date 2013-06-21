@@ -118,7 +118,7 @@ void main(void) {
 		ConvertADC();
         while (BusyADC());
         temp = ReadADC();
-        if (c == 'l') {
+        /*if (c == 'l') {
             PORTBbits.RB2 = 1;
         } else if (c == 'd') {
             PORTBbits.RB2 = 0;
@@ -134,7 +134,7 @@ void main(void) {
 		else if (temp <objectivo) {
 		 	PORTBbits.RB2 = 0;
 			ligarResistencia = 1;
-		}	
+		}	*/
         str[3] = c;
 		
         putsUSART(str);
