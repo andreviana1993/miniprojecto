@@ -13,7 +13,8 @@ int contagem=0;
 
 void timer10us( void)
 {
-		WriteTimer0( 206 );
+		WriteTimer0( 56 );
+		contagem++;
 }
 
 
@@ -53,8 +54,8 @@ void high_ISR(void) {
     if (INTCONbits.INT0IF) {
 		INTCON2bits.INTEDG0 = !INTCON2bits.INTEDG0;
 		//PORTDbits.RD7 = ~(PORTDbits.RD7 );
-		WriteTimer0( 206 );
 		contagem=0;
+		timer10us();
 		INTCONbits.INT0IF = 0;		
     } 
     if (INTCONbits.TMR0IF) //handle high-priority interrupts
@@ -73,7 +74,6 @@ void high_ISR(void) {
 		PORTDbits.RD7 = 1;
 		contagem=0;
 		}
-		contagem++;
         INTCONbits.TMR0IF = 0;
     }
 }
@@ -116,7 +116,7 @@ void main(void) {
     ADCON0 = 0b00000001;
     ADCON1 = 0b00111110;
     ADCON2 = 0b10000110;
-    OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_1);
+    OpenTimer0(TIMER_INT_ON & T0_8BIT & T0_SOURCE_INT & T0_PS_1_1);
     //WriteTimer0( 6 );
 
     while (1) {
