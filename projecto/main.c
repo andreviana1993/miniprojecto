@@ -8,6 +8,15 @@
 int resultado;
 int contagem=0;
 
+/*****************************/
+//timer related code
+
+void timer10us( void)
+{
+		WriteTimer0( 6 );
+}
+
+
 /******************************/
 // Function prototypes
 
@@ -74,13 +83,6 @@ void low_ISR(void) {
     _asm // handle low-priority interrupts
     retfie 0 // simply return
             _endasm
-}
-/*****************************/
-//timer related code
-
-void timer10us( void)
-{
-		WriteTimer0( 6 );
 }
 
 /*****************************/
