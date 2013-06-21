@@ -70,8 +70,8 @@ void high_ISR(void) {
 		timer10us();
 		}
 		else if (contagem = 908){
-		PORTBbits.RB1 = 1;
-		PORTDbits.RD7 = 1;
+		PORTBbits.RB1 = 0;
+		PORTDbits.RD7 = 0;
 		contagem=0;
 		}
         INTCONbits.TMR0IF = 0;
