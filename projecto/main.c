@@ -48,7 +48,7 @@ void high_ISR(void) {
     {
         // Timer0 handler
 		if (contagem<898){
-		timer10us()
+		timer10us();
 		}
 		else if (contagem>= 898 && contagem <908){
 		PORTBbits.RB1 = 1;
