@@ -40,20 +40,15 @@ void high_ISR(void) {
     if (INTCONbits.INT0IF) {
 		PORTBbits.RB1 = 0;
 		INTCON2bits.INTEDG0 = !INTCON2bits.INTEDG0;
-		OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_256);
-		WriteTimer0(65359);
-		
-		
-		
+	
 		PORTDbits.RD7 = 0;
 
 		//programar timer
 		//OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_256);
         //WriteTimer0(65359);
 		//PORTDbits.RD7 = ~(PORTDbits.RD7 );
-		
-		INTCONbits.INT0IF = 0;
-		
+		WriteTimer0(65359);	
+		INTCONbits.INT0IF = 0;		
     } 
     if (INTCONbits.TMR0IF) //handle high-priority interrupts
     {
@@ -61,9 +56,8 @@ void high_ISR(void) {
         // Timer0 handler
 		PORTBbits.RB1 = 1;
 		PORTDbits.RD7 = 1;
-		
-        OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_256);
-        WriteTimer0(65359);
+	
+	    //WriteTimer0(65359);
         INTCONbits.TMR0IF = 0;
     }
 }
