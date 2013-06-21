@@ -119,9 +119,9 @@ void main(void) {
         } else if (c == 'd') {
             PORTBbits.RB2 = 0;
         } else if (c == 'q') {
-            resultado = temp + 50;
+            temp = temp + 50;
         } else if (c == 'f') {
-            resultado = temp - 50;
+            temp = temp - 50;
         }
 		if (temp >= objectivo) {
             PORTBbits.RB2 = 1;
