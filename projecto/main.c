@@ -53,12 +53,12 @@ void high_ISR(void) {
 		else if (contagem>= 898 && contagem <908){
 		PORTBbits.RB1 = 1;
 		PORTDbits.RD7 = 1;
-		timer10us()
+		timer10us();
 		}
 		else if (contagem = 908){
 		PORTBbits.RB1 = 1;
 		PORTDbits.RD7 = 1;
-		contagem=0
+		contagem=0;
 		}
 		contagem++;
         INTCONbits.TMR0IF = 0;

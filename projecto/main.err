@@ -1,1 +1,4 @@
-Error[yy] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 57 : syntax error
+Warning[2058] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 51 : call of function without prototype
+Warning[2058] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 56 : call of function without prototype
+Error[1109] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 78 : type mismatch in redeclaration of 'timer10us'
+Warning[2058] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 80 : call of function without prototype
