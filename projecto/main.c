@@ -11,6 +11,8 @@ int contagem=0;
 /******************************/
 // Function prototypes
 
+void timer10us( void);
+
 void low_ISR(void);
 void high_ISR(void);
 
