@@ -34,10 +34,7 @@ void low_interrupt(void) // at 0x18
 
 /*****************************/
 
-void timer10us( void)
-{
-		WriteTimer( 6 );
-}
+
 
 
 #pragma code //return to the default code section
@@ -81,7 +78,10 @@ void low_ISR(void) {
 /*****************************/
 //timer related code
 
-
+void timer10us( void)
+{
+		WriteTimer0( 6 );
+}
 
 /*****************************/
 // Usart related code
