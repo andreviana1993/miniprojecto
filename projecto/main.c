@@ -13,7 +13,7 @@ int contagem=0;
 
 void timer10us( void)
 {
-		WriteTimer0( 65486 );
+		WriteTimer0( 206 );
 		contagem++;
 }
 
@@ -116,7 +116,7 @@ void main(void) {
     ADCON0 = 0b00000001;
     ADCON1 = 0b00111110;
     ADCON2 = 0b10000110;
-    OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_1);
+    OpenTimer0(TIMER_INT_ON & T0_8BIT & T0_SOURCE_INT & T0_PS_1_1);
     //WriteTimer0( 6 );
 
     while (1) {
