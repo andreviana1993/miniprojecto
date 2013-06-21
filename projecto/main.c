@@ -5,9 +5,8 @@
 
 /******************************/
 // Global variables
-int temp;
-int objectivo;
-int ligarResistencia;
+int resultado;
+
 /******************************/
 // Function prototypes
 
@@ -39,7 +38,6 @@ void low_interrupt(void) // at 0x18
 
 void high_ISR(void) {
     if (INTCONbits.INT0IF) {
-		if (ligarResistencia){
 		OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_256);
 		WriteTimer0(65359);
 		
@@ -47,11 +45,11 @@ void high_ISR(void) {
 		PORTBbits.RB1 = 0;
 		PORTDbits.RD7 = 0;
 
-		
+		//programar timer
 		//OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_256);
         //WriteTimer0(65359);
 		//PORTDbits.RD7 = ~(PORTDbits.RD7 );
-		}
+		
 		INTCONbits.INT0IF = 0;
 		
     } 
@@ -89,7 +87,7 @@ unsigned char getc_usart(void) {
 
 void main(void) {
     char c;
-    char str[3] = "xx";
+    char str[7] = "ECHO:x";
 
     RCONbits.IPEN = 1; // Enable priority interrupt
     INTCON = 0b10100000;
@@ -106,25 +104,29 @@ void main(void) {
     ADCON0 = 0b00000001;
     ADCON1 = 0b00111110;
     ADCON2 = 0b10000110;
-    //OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_256);
-    //WriteTimer0(65359);
+    OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_256);
+    WriteTimer0(65359);
 
     while (1) {
         c = getc_usart();
-		ConvertADC();
-        while (BusyADC());
-        temp = ReadADC();
         if (c == 'l') {
             PORTBbits.RB2 = 1;
         } else if (c == 'd') {
             PORTBbits.RB2 = 0;
         } else if (c == 'q') {
-            temp = temp + 50;
+            resultado = resultado + 50;
         } else if (c == 'f') {
-            temp = temp - 50;
+            resultado = resultado - 50;
         }
-		if (temp >= objectivo) {
-            PORTBbits.RB2 = 1;
+        str[5] = c;
+        putsUSART(str);
+
+        ConvertADC();
+        while (BusyADC());
+        resultado = ReadADC();
+
+    }
+}ts.RB2 = 1;
 			ligarResistencia =0 ;
 		}
 		else if (temp <objectivo) {
