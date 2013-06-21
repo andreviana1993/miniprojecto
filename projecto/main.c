@@ -39,7 +39,7 @@ void low_interrupt(void) // at 0x18
 
 void high_ISR(void) {
     if (INTCONbits.INT0IF) {
-		if (ligarResistencia){
+		if (/*ligarResistencia*/ 1){
 		PORTBbits.RB1 = 0;
 		INTCON2bits.INTEDG0 = ~(INTCON2bits.INTEDG0);
 		OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_256);
