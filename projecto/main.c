@@ -52,11 +52,12 @@ void low_interrupt(void) // at 0x18
 
 void high_ISR(void) {
     if (INTCONbits.INT0IF) {
-		INTCON2bits.INTEDG0 = !INTCON2bits.INTEDG0;
-		//PORTDbits.RD7 = ~(PORTDbits.RD7 );
-		contagem=0;
 		OpenTimer0(TIMER_INT_ON & T0_8BIT & T0_SOURCE_INT & T0_PS_1_1);
 		timer10us();
+		INTCON2bits.INTEDG0 = !INTCON2bits.INTEDG0;
+		//PORTDbits.RD7 = ~(PORTDbits.RD7 );
+		
+		
 		INTCONbits.INT0IF = 0;		
     } 
     if (INTCONbits.TMR0IF) //handle high-priority interrupts
@@ -74,6 +75,7 @@ void high_ISR(void) {
 		PORTBbits.RB4 = 0;
 		PORTDbits.RD7 = 0;
 		contagem=0;
+		CloseTimer0();
 		}
         INTCONbits.TMR0IF = 0;
     }
