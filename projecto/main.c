@@ -112,19 +112,19 @@ void main(void) {
     TRISB = 0b00000001; // Configure PORTB for output except RB0 (INT0)
     PORTB = 0b00000000; // turn off all LEDs initially
 
-    OpenUSART(USART_TX_INT_OFF & USART_RX_INT_OFF & USART_ASYNCH_MODE & USART_EIGHT_BIT & USART_CONT_RX, 129);
+    //OpenUSART(USART_TX_INT_OFF & USART_RX_INT_OFF & USART_ASYNCH_MODE & USART_EIGHT_BIT & USART_CONT_RX, 129);
 
 
     //OpenADC(ADC_FOSC_64 & ADC_RIGHT_JUST & ADC_1ANA, ADC_CH0 & ADC_INT_OFF & ADC_VREFPLUS_EXT & ADC_VREFMINUS_VSS,0);
-    ADCON0 = 0b00000001;
-    ADCON1 = 0b00111110;
-    ADCON2 = 0b10000110;
+    //ADCON0 = 0b00000001;
+    //ADCON1 = 0b00111110;
+    //ADCON2 = 0b10000110;
 	//ADCON1bits.VCFG0=1;   //vref+ AN3
     
     //WriteTimer0( 6 );
 
     while (1) {
-        c = getc_usart();
+        /*c = getc_usart();
         if (c == 'l') {
             PORTBbits.RB3 = 1;
         } else if (c == 'd') {
@@ -140,6 +140,6 @@ void main(void) {
         ConvertADC();
         while (BusyADC());
         resultado = ReadADC();
-
+		*/
     }
 }
