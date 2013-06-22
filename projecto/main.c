@@ -124,7 +124,7 @@ void main(void) {
     //WriteTimer0( 6 );
 
     while (1) {
-        c = getc_usart();
+        /*c = getc_usart();
         if (c == 'l') {
             PORTBbits.RB3 = 1;
         } else if (c == 'd') {
@@ -139,7 +139,7 @@ void main(void) {
 
         ConvertADC();
         while (BusyADC());
-        resultado = ReadADC();
+        resultado = ReadADC();*/
 
     }
 }
