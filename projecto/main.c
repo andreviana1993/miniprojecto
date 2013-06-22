@@ -108,7 +108,7 @@ void main(void) {
     INTCON = 0b10100000;
 
     TRISD = 0b00000000; // Configure PORTD for output
-    PORTD = 0b00000000; // turn off all LEDs initially
+    //PORTD = 0b00000000; // turn off all LEDs initially
     TRISB = 0b00000001; // Configure PORTB for output except RB0 (INT0)
     PORTB = 0b00000000; // turn off all LEDs initially
 
