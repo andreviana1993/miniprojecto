@@ -52,7 +52,8 @@ void low_interrupt(void) // at 0x18
 
 void high_ISR(void) {
     if (INTCONbits.INT0IF) {
-		OpenTimer0(TIMER_INT_ON & T0_8BIT & T0_SOURCE_INT & T0_PS_1_1);
+		T0CON.TMR0ON = 1;
+		
 		timer10us();
 		INTCON2bits.INTEDG0 = !INTCON2bits.INTEDG0;
 		//PORTDbits.RD7 = ~(PORTDbits.RD7 );
@@ -75,7 +76,7 @@ void high_ISR(void) {
 		PORTBbits.RB4 = 0;
 		PORTDbits.RD7 = 0;
 		contagem=0;
-		CloseTimer0();
+		T0CON.TMR0ON = 0;
 		}
         INTCONbits.TMR0IF = 0;
     }
@@ -120,11 +121,11 @@ void main(void) {
     ADCON1 = 0b00111110;
     ADCON2 = 0b10000110;
 	//ADCON1bits.VCFG0=1;   //vref+ AN3
-    
-    //WriteTimer0( 6 );
+    OpenTimer0(TIMER_INT_ON & T0_8BIT & T0_SOURCE_INT & T0_PS_1_1);
+    T0CON.TMR0ON = 0;
 
     while (1) {
-        /*c = getc_usart();
+        c = getc_usart();
         if (c == 'l') {
             PORTBbits.RB3 = 1;
         } else if (c == 'd') {
@@ -139,7 +140,7 @@ void main(void) {
 
         ConvertADC();
         while (BusyADC());
-        resultado = ReadADC();*/
+        resultado = ReadADC();
 
     }
 }
