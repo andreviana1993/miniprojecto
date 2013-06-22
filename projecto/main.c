@@ -51,7 +51,7 @@ void low_interrupt(void) // at 0x18
 #pragma interrupt high_ISR
 
 void high_ISR(void) {
-    if (INTCONbits.INT0IF) {
+    if (INTCONbits.INT2IF) {
 		INTCON2bits.INTEDG0 = !INTCON2bits.INTEDG0;
 		//PORTDbits.RD7 = ~(PORTDbits.RD7 );
 		contagem=0;
@@ -66,12 +66,12 @@ void high_ISR(void) {
 		timer10us();
 		}
 		else if (contagem>= 898 && contagem <908){
-		PORTBbits.RB1 = 1;
+		PORTBbits.RB4 = 1;
 		PORTDbits.RD7 = 1;
 		timer10us();
 		}
 		else if (contagem = 908){
-		PORTBbits.RB1 = 0;
+		PORTBbits.RB4 = 0;
 		PORTDbits.RD7 = 0;
 		contagem=0;
 		}
@@ -113,10 +113,10 @@ void main(void) {
     OpenUSART(USART_TX_INT_OFF & USART_RX_INT_OFF & USART_ASYNCH_MODE & USART_EIGHT_BIT & USART_CONT_RX, 129);
 
 
-    OpenADC(ADC_FOSC_64 & ADC_RIGHT_JUST & ADC_1ANA, ADC_CH0 & ADC_INT_OFF & ADC_VREFPLUS_EXT & ADC_VREFMINUS_VSS,0);
-    //ADCON0 = 0b00000001;
-    //ADCON1 = 0b00111110;
-    //ADCON2 = 0b10000110;
+    //OpenADC(ADC_FOSC_64 & ADC_RIGHT_JUST & ADC_1ANA, ADC_CH0 & ADC_INT_OFF & ADC_VREFPLUS_EXT & ADC_VREFMINUS_VSS,0);
+    ADCON0 = 0b00000001;
+    ADCON1 = 0b00111110;
+    ADCON2 = 0b10000110;
 	//ADCON1bits.VCFG0=1;   //vref+ AN3
     
     //WriteTimer0( 6 );
@@ -124,9 +124,9 @@ void main(void) {
     while (1) {
         c = getc_usart();
         if (c == 'l') {
-            PORTBbits.RB2 = 1;
+            PORTBbits.RB3 = 1;
         } else if (c == 'd') {
-            PORTBbits.RB2 = 0;
+            PORTBbits.RB3 = 0;
         } else if (c == 'q') {
             resultado = resultado + 50;
         } else if (c == 'f') {
