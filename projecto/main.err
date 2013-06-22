@@ -1,0 +1,3 @@
+Error[1105] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 120 : symbol 'ADCONbits' has not been defined
+Error[1151] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 120 : struct or union object designator expected
+Error[1101] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 120 : lvalue required
