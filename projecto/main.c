@@ -53,7 +53,7 @@ void high_ISR(void) {
 		INTCONbits.INT0IF = 0;		
     } 
     if (INTCONbits.TMR0IF) //handle high-priority interrupts
-    {
+    {/*
         // Timer0 handler
 		if (contagem<898){
 		timer10us();
@@ -68,7 +68,7 @@ void high_ISR(void) {
 		PORTDbits.RD7 = 0;
 		contagem=0;
 		CloseTimer0();
-		}
+		}*/
         INTCONbits.TMR0IF = 0;
     }
 }
