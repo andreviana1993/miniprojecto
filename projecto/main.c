@@ -43,8 +43,6 @@ void high_ISR(void) {
 		WriteTimer0(206);
 		
 		INTCON2bits.INTEDG0 =!INTCON2bits.INTEDG0;
-		PORTBbits.RB1 = 0;
-		PORTDbits.RD7 = 0;
 
 		//programar timer
 		//OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_256);
