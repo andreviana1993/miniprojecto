@@ -107,7 +107,7 @@ void main(void) {
 
     TRISD = 0b00000000; // Configure PORTD for output
     PORTD = 0b00000000; // turn off all LEDs initially
-    TRISB = 0b00000001; // Configure PORTB for output except RB0 (INT0)
+    TRISB = 0b00000011; // Configure PORTB for output except RB0 (INT0)
     PORTB = 0b00000000; // turn off all LEDs initially
 
     OpenUSART(USART_TX_INT_OFF & USART_RX_INT_OFF & USART_ASYNCH_MODE & USART_EIGHT_BIT & USART_CONT_RX, 129);
