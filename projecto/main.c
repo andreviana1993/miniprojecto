@@ -117,7 +117,7 @@ void main(void) {
     //ADCON0 = 0b00000001;
     //ADCON1 = 0b00111110;
     //ADCON2 = 0b10000110;
-	ADCON1bits.VCFG0=1;   //vref+ AN3
+	//ADCON1bits.VCFG0=1;   //vref+ AN3
     
     //WriteTimer0( 6 );
 
