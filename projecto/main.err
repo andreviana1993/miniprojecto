@@ -1,0 +1,3 @@
+Warning[2058] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 59 : call of function without prototype
+Warning[2058] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 64 : call of function without prototype
+Error[1109] C:\Users\André\SparkleShare\miniprojecto\projecto\main.c 79 : type mismatch in redeclaration of 'timer10us'

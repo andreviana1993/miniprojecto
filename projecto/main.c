@@ -8,14 +8,6 @@
 int resultado;
 int contagem=0;
 
-/*****************************/
-//timer related code
-
-void timer10us( void)
-{
-		WriteTimer0( 206 );
-		contagem++;
-}
 
 
 /******************************/
@@ -80,6 +72,16 @@ void high_ISR(void) {
         INTCONbits.TMR0IF = 0;
     }
 }
+
+/*****************************/
+//timer related code
+
+void timer10us( void)
+{
+		WriteTimer0( 206 );
+		contagem++;
+}
+
 
 #pragma interruptlow low_ISR
 
