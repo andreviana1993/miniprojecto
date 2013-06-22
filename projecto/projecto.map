@@ -1,5 +1,5 @@
 MPLINK 4.46, Linker
-Linker Map File - Created Sat Jun 22 12:02:14 2013
+Linker Map File - Created Sat Jun 22 12:20:33 2013
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -116,7 +116,7 @@ Linker Map File - Created Sat Jun 22 12:02:14 2013
        ___return_lbl00001   0x00000c    program     static                          
        ___return_lbl00002   0x000302    program     static                          
        ___return_lbl00002   0x00001c    program     static                          
-       ___return_lbl00012   0x000156    program     static                          
+       ___return_lbl00012   0x000160    program     static                          
                    __init   0x000006    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
             __zero_memory   0x000478    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
                 _do_cinit   0x000266    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
@@ -127,15 +127,15 @@ Linker Map File - Created Sat Jun 22 12:02:14 2013
             copy_one_byte   0x0002de    program     static                          
                      done   0x000302    program     static                          
              done_copying   0x0002ec    program     static                          
-               getc_usart   0x000168    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
+               getc_usart   0x000172    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
                  high_ISR   0x000044    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
            high_interrupt   0x000008    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
                      loop   0x0004a8    program     static                          
                    loop_h   0x000486    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
                    loop_l   0x000490    program     static E:\3.45\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-                  low_ISR   0x000140    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
+                  low_ISR   0x00014a    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
             low_interrupt   0x000018    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
-                     main   0x000174    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
+                     main   0x00017e    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
                 putsUSART   0x00038e    program     extern E:\3.45\pic18-lt\cxx-framework\src\pmc_common\USART\uputs.c
                      test   0x000280    program     static                          
                 timer10us   0x00002c    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
@@ -906,10 +906,10 @@ Linker Map File - Created Sat Jun 22 12:02:14 2013
        ___return_lbl00002   0x00001c    program     static                          
                 timer10us   0x00002c    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
                  high_ISR   0x000044    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
-                  low_ISR   0x000140    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
-       ___return_lbl00012   0x000156    program     static                          
-               getc_usart   0x000168    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
-                     main   0x000174    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
+                  low_ISR   0x00014a    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
+       ___return_lbl00012   0x000160    program     static                          
+               getc_usart   0x000172    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
+                     main   0x00017e    program     extern C:\Users\André\SparkleShare\miniprojecto\projecto\main.c
                 _do_cinit   0x000266    program     extern E:\3.45\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                      test   0x000280    program     static                          
                 copy_loop   0x0002d8    program     static                          

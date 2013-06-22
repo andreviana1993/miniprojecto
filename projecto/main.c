@@ -55,6 +55,7 @@ void high_ISR(void) {
 		INTCON2bits.INTEDG0 = !INTCON2bits.INTEDG0;
 		//PORTDbits.RD7 = ~(PORTDbits.RD7 );
 		contagem=0;
+		OpenTimer0(TIMER_INT_ON & T0_8BIT & T0_SOURCE_INT & T0_PS_1_1);
 		timer10us();
 		INTCONbits.INT0IF = 0;		
     } 
@@ -106,7 +107,7 @@ void main(void) {
 
     TRISD = 0b00000000; // Configure PORTD for output
     PORTD = 0b00000000; // turn off all LEDs initially
-    TRISB = 0b00000001; // Configure PORTB for output except RB1 and RB0 (INT0)
+    TRISB = 0b00000001; // Configure PORTB for output except RB0 (INT0)
     PORTB = 0b00000000; // turn off all LEDs initially
 
     OpenUSART(USART_TX_INT_OFF & USART_RX_INT_OFF & USART_ASYNCH_MODE & USART_EIGHT_BIT & USART_CONT_RX, 129);
@@ -116,7 +117,7 @@ void main(void) {
     ADCON0 = 0b00000001;
     ADCON1 = 0b00111110;
     ADCON2 = 0b10000110;
-    OpenTimer0(TIMER_INT_ON & T0_8BIT & T0_SOURCE_INT & T0_PS_1_1);
+    
     //WriteTimer0( 6 );
 
     while (1) {
