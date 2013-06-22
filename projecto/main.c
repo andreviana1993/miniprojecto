@@ -42,7 +42,7 @@ void high_ISR(void) {
 		OpenTimer0(TIMER_INT_ON & T0_8BIT & T0_SOURCE_INT & T0_PS_1_1);
 		WriteTimer0(206);
 		
-		INTCON2bits.INTEDG0 = ~(INTCON2bits.INTEDG0);
+		INTCON2bits.INTEDG0 =!INTCON2bits.INTEDG0;
 		PORTBbits.RB1 = 0;
 		PORTDbits.RD7 = 0;
 
